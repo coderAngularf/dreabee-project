@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="horizontal" data-nav-style="menu-click" data-menu-position="fixed" data-theme-mode="light">
+
+<head>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Dreabee - Your All-in-One Influencer Marketing Platform </title>
+    <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/brand-logos/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap Css -->
+    <link id="style" href="../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+
+    <!-- Style Css -->
+    <link href="../assets/css/styles.css" rel="stylesheet" >
+
+    <!-- Icons Css -->
+    <link href="../assets/css/icons.css" rel="stylesheet" >
+
+    <!-- Node Waves Css -->
+    <link href="../assets/libs/node-waves/waves.min.css" rel="stylesheet" >
+
+    <!-- SwiperJS Css -->
+    <link rel="stylesheet" href="../assets/libs/swiper/swiper-bundle.min.css">
+
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="../assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="../assets/libs/@simonwep/pickr/themes/nano.min.css">
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="../assets/libs/choices.js/public/assets/styles/choices.min.css">
+
+    <script>
+        if(localStorage.ynexlandingdarktheme){
+            document.querySelector("html").setAttribute("data-theme-mode","dark")
+        }
+        if(localStorage.ynexlandingrtl){
+            document.querySelector("html").setAttribute("dir","rtl")
+            document.querySelector("#style")?.setAttribute("href", "../assets/libs/bootstrap/css/bootstrap.rtl.min.css");
+        }
+    </script>
+
+
+</head>
+
+<body class="landing-body">
+
+    <!-- Start Switcher -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="switcher-canvas" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Switcher</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="">
+                <p class="switcher-style-head">Theme Color Mode:</p>
+                <div class="row switcher-style">
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-light-theme">
+                                Light
+                            </label>
+                            <input class="form-check-input" type="radio" name="theme-style" id="switcher-light-theme"
+                                checked>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-dark-theme">
+                                Dark
+                            </label>
+                            <input class="form-check-input" type="radio" name="theme-style" id="switcher-dark-theme">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <p class="switcher-style-head">Directions:</p>
+                <div class="row switcher-style">
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-ltr">
+                                LTR
+                            </label>
+                            <input class="form-check-input" type="radio" name="direction" id="switcher-ltr" checked>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-rtl">
+                                RTL
+                            </label>
+                            <input class="form-check-input" type="radio" name="direction" id="switcher-rtl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-colors">
+                <p class="switcher-style-head">Theme Primary:</p>
+                <div class="d-flex align-items-center switcher-style">
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-1" type="radio"
+                            name="theme-primary" id="switcher-primary">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-2" type="radio"
+                            name="theme-primary" id="switcher-primary1">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-3" type="radio" name="theme-primary"
+                            id="switcher-primary2">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-4" type="radio" name="theme-primary"
+                            id="switcher-primary3">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-5" type="radio" name="theme-primary"
+                            id="switcher-primary4">
+                    </div>
+                    <div class="form-check switch-select me-3 ps-0 mt-1 color-primary-light">
+                        <div class="theme-container-primary"></div>
+                        <div class="pickr-container-primary"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="switcher-style-head">reset:</p>
+                <div class="text-center">
+                    <button id="reset-all" class="btn btn-danger mt-3">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Switcher -->
+
+    <div class="landing-page-wrapper">
+
+         <!-- app-header -->
+ <header class="app-header">
+
+            <!-- Start::main-header-container -->
+            <div class="main-header-container container-fluid">
+
+                <!-- Start::header-content-left -->
+                <div class="header-content-left">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <div class="horizontal-logo">
+                            <a href="index.html" class="header-logo">
+                                <img src="../assets/images/brand-logos/toggle-logo.png" alt="logo" class="toggle-logo">
+                                <img src="../assets/images/brand-logos/toggle-dark.png" alt="logo" class="toggle-dark">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <!-- Start::header-link -->
+                        <a href="javascript:void(0);" class="sidemenu-toggle header-link" data-bs-toggle="sidebar">
+                            <span class="open-toggle">
+                                <i class="ri-menu-3-line fs-20"></i>
+                            </span>
+                        </a>
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-left -->
+
+                <!-- Start::header-content-right -->
+                <div class="header-content-right">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element align-items-center">
+                        <!-- Start::header-link|switcher-icon -->
+                        <div class="btn-list d-lg-none d-block">
+                            <a href="sign-up-basic.html" class="btn btn-primary-light">
+                               login
+                            </a>
+                            <a href="sign-up-basic.html" class="btn btn-primary-light">
+                                Sign Up
+                            </a>
+                            <button class="btn btn-icon btn-success switcher-icon" data-bs-toggle="offcanvas" data-bs-target="#switcher-canvas">
+                                <i class="ri-settings-3-line"></i>
+                            </button>
+                        </div>
+                        <!-- End::header-link|switcher-icon -->
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-right -->
+
+            </div>
+            <!-- End::main-header-container -->
+
+        </header>       
+        <!-- /app-header -->
+
+        <!-- Start::app-sidebar -->
+        <aside class="app-sidebar sticky" id="sidebar">
+
+            <div class="container-xl">
+                <!-- Start::main-sidebar -->
+                <div class="main-sidebar">
+
+                    <!-- Start::nav -->
+                    <nav class="main-menu-container nav nav-pills sub-open">
+                        <div class="landing-logo-container">
+                            <div class="horizontal-logo">
+                                <a href="index.html" class="header-logo">
+                                    <img src="../assets/images/brand-logos/desktop-logo.png" alt="logo" class="desktop-logo">
+                                    <img src="../assets/images/brand-logos/desktop-white.png" alt="logo" class="desktop-white">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slide-left" id="slide-left"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path> </svg></div>
+                        <ul class="main-menu">
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a class="side-menu__item" href="landing.html">
+                                    <span class="side-menu__label">Home</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="about-us.html" class="linked_text">
+                                    <span class="side-menu__label">About</span>
+                                </a>
+                                <!-- <a href="about-us.html" class="side-menu__item">
+                                    <span class="side-menu__label">About</span>
+                                </a> -->
+                               
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide has-sub">
+                                <a href="javascript:void(0);" class="side-menu__item">
+                                    <span class="side-menu__label me-2">More</span>
+                                    <i class="fe fe-chevron-right side-menu__angle op-8"></i>
+                                </a>
+                                <ul class="slide-menu child1">
+                                    <li class="slide">
+                                        <a href="#statistics" class="side-menu__item">Statistics</a>
+                                    </li>
+                                    <li class="slide">
+                                        <a href="#our-mission" class="side-menu__item">Our Mission</a>
+                                    </li>
+                                    <li class="slide">
+                                        <a href="#features" class="side-menu__item">Features</a>
+                                    </li>
+                                    <li class="slide">
+                                        <a href="#testimonials" class="side-menu__item">Testimonials</a>
+                                    </li>
+                                    <li class="slide has-sub">
+                                        <a href="javascript:void(0);" class="side-menu__item">Level-2
+                                            <i class="fe fe-chevron-right side-menu__angle"></i></a>
+                                        <ul class="slide-menu child2">
+                                            <li class="slide">
+                                                <a href="javascript:void(0);" class="side-menu__item">Level-2-1</a>
+                                            </li>
+                                            <li class="slide has-sub">
+                                                <a href="javascript:void(0);" class="side-menu__item">Level-2-2
+                                                    <i class="fe fe-chevron-right side-menu__angle"></i></a>
+                                                <ul class="slide-menu child3">
+                                                    <li class="slide">
+                                                        <a href="javascript:void(0);" class="side-menu__item">Level-2-2-1</a>
+                                                    </li>
+                                                    <li class="slide has-sub">
+                                                        <a href="javascript:void(0);" class="side-menu__item">Level-2-2-2</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="#testimonials" class="side-menu__item">
+                                    <span class="side-menu__label">Clients</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="#team" class="side-menu__item">
+                                    <span class="side-menu__label">Team</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="pricing.html" class="linked_text">
+                                    <span class="side-menu__label">Pricing</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="faq's.html" class="linked_text">
+                                    <span class="side-menu__label">Faq's</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="#contact" class="side-menu__item">
+                                    <span class="side-menu__label">Contact</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+
+                        </ul>
+                        <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path> </svg></div>
+                        <div class="d-lg-flex d-none">
+                            <div class="btn-list d-lg-flex d-none mt-lg-2 mt-xl-0 mt-0">
+                                <a href="sign-in-cover.html" class="btn btn-wave btn-primary">
+                                   Login
+                                </a>
+                                <a href="sign-up-cover.html" class="btn btn-wave btn-primary">
+                                 Sign Up
+                                </a>
+                                <button class="btn btn-wave btn-icon btn-light switcher-icon" data-bs-toggle="offcanvas" data-bs-target="#switcher-canvas">
+                                    <i class="ri-settings-3-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- End::nav -->
+
+                </div>
+                <!-- End::main-sidebar -->
+            </div>
+
+        </aside>
+        <!-- End::app-sidebar -->
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                <!-- Page Header -->
+                <div class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
+                    <h1 class="page-title fw-semibold fs-18 mb-0">Testimonials</h1>
+                    <div class="ms-md-1 ms-0">
+                        <nav>
+                            <ol class="breadcrumb mb-0">
+                                <li class="breadcrumb-item"><a href="javascript:void(0);">Pages</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Testimonials</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Page Header Close -->
+
+                <!-- Start::row-1 -->
+                <section class="section landing-testimonials section-bg" id="testimonials">
+                    <div class="container text-center">
+                        <p class="fs-12 fw-semibold text-success mb-1"><span class="landing-section-heading">TESTIMONIALS</span></p>
+                        <h3 class="fw-semibold mb-2">Our Testimonials</h3>
+                        <div class="row justify-content-center">
+                       <p>Hear from our satisfied users! Dreabee has helped numerous brands and influencers elevate their marketing strategies and achieve measurable success. Here are some of the stories and feedback from our valued clients who have experienced the power of Dreabee firsthand.</p>
+                        </div>
+                        <div class="swiper pagination-dynamic text-start">
+                            <div class="swiper-wrapper">
+                             
+                            
+                                <div class="swiper-slide">
+                                    <div class="card custom-card testimonial-card">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="avatar avatar-md avatar-rounded me-3">
+                                                    <img src="../assets/images/faces/3.jpg" alt="">
+                                                </span>
+                                                <div>
+                                                    <p class="mb-0 fw-semibold fs-14">Sarah L</p>
+                                                    <p class="mb-0 fs-10 fw-semibold text-muted">Marketing Manager at PureBeauty Co</p>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <b> Boosting Campaign Reach - Beauty Brand Success</b>
+                                                <span class="text-muted">""Dreabee transformed our influencer marketing approach! The platform’s audience insights allowed us to connect with influencers who perfectly matched our target demographic. We saw a 40% increase in engagement and reached over 500,000 new followers in our ideal audience group. Dreabee is a must-have for any brand serious about influencer marketing!"</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-muted">Rating : </span>
+                                                    <span class="text-warning d-block ms-1">
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-half-fill"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="float-end fs-12 fw-semibold text-muted text-end">
+                                                    <span>26 days ago</span>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card custom-card testimonial-card">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="avatar avatar-md avatar-rounded me-3">
+                                                    <img src="../assets/images/faces/3.jpg" alt="">
+                                                </span>
+                                                <div>
+                                                    <p class="mb-0 fw-semibold fs-14">Michael K</p>
+                                                    <p class="mb-0 fs-10 fw-semibold text-muted">Digital Marketing Specialist at FitStyle Inc.</p>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <b>Seamless Campaign Management for Consistent Results</b>
+                                                <span class="text-muted">"The Campaign Management tools on Dreabee streamlined our entire workflow. From influencer selection to tracking deliverables, the platform made everything incredibly efficient. Our team was able to monitor engagement metrics in real-time, which helped us optimize our content strategy on the go. It’s the best platform we’ve used for influencer collaborations."</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-muted">Rating : </span>
+                                                    <span class="text-warning d-block ms-1">
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-half-fill"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="float-end fs-12 fw-semibold text-muted text-end">
+                                                    <span>26 days ago</span>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card custom-card testimonial-card">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="avatar avatar-md avatar-rounded me-3">
+                                                    <img src="../assets/images/faces/3.jpg" alt="">
+                                                </span>
+                                                <div>
+                                                    <p class="mb-0 fw-semibold fs-14">Priya T.</p>
+                                                    <p class="mb-0 fs-10 fw-semibold text-muted">Head of Brand at LuxeHome Living</p>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <b> Data-Driven Decisions with Powerful Analytics</b>
+                                                <span class="text-muted">"We were impressed with Dreabee’s analytics! The real-time data and sentiment analysis provided deep insights into our campaigns. Understanding how audiences perceived our content allowed us to tweak our strategies and maximize ROI. We couldn’t be happier with the results. Dreabee has been a game-changer for us."</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-muted">Rating : </span>
+                                                    <span class="text-warning d-block ms-1">
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-half-fill"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="float-end fs-12 fw-semibold text-muted text-end">
+                                                    <span>26 days ago</span>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card custom-card testimonial-card">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="avatar avatar-md avatar-rounded me-3">
+                                                    <img src="../assets/images/faces/16.jpg" alt="">
+                                                </span>
+                                                <div>
+                                                    <p class="mb-0 fw-semibold fs-14">Alex R., </p>
+                                                    <p class="mb-0 fs-10 fw-semibold text-muted">CMO at FreshWave Apparel</p>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                               <b>Unmatched Competitor Insights</b>
+                                                <span class="text-muted">"Thanks to Dreabee’s competitor analysis tools, we gained a new perspective on industry trends and where we stood against our competitors. The insights on influencer partnerships and engagement benchmarks helped us refine our strategies. Dreabee is hands down the most comprehensive platform we’ve tried."</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-muted">Rating : </span>
+                                                    <span class="text-warning d-block ms-1">
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="float-end fs-12 fw-semibold text-muted text-end">
+                                                    <span>1 month ago</span>
+                                                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            <div class="swiper-pagination mt-4">Join the brands that trust Dreabee to power their influencer marketing. Sign up today and see how our platform can transform your campaigns!</div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Start:: Section-6 -->
+               
+                <!--End::row-1 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+    </div>
+
+    <div class="scrollToTop">
+        <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span>
+    </div>
+    <div id="responsive-overlay"></div>
+
+    <!-- Popper JS -->
+    <script src="../assets/libs/@popperjs/core/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Color Picker JS -->
+    <script src="../assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
+
+    <!-- Choices JS -->
+    <script src="../assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="../assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Defaultmenu JS -->
+    <script src="../assets/js/defaultmenu.min.js"></script>
+
+    <!-- Internal Landing JS -->
+    <script src="../assets/js/landing.js"></script>
+
+    <!-- Node Waves JS-->
+    <script src="../assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Sticky JS -->
+    <script src="../assets/js/sticky.js"></script>
+
+</body>
+
+</html>
