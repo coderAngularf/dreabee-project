@@ -2576,7 +2576,9 @@ typography
   content: var(--bs-breadcrumb-divider, "\ea65");
   font-family: "tabler-icons" !important;
 }
-
+.section-padding{
+  padding:60px 0;
+}
 [dir=rtl] .page-header-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   content: var(--bs-breadcrumb-divider, "\ea64");
   font-family: "tabler-icons" !important;
@@ -19776,146 +19778,114 @@ background-repeat: no-repeat;
 /* Start::background transparent */
 .bg-primary-transparent {
   background-color: var(--primary01) !important;
-  color: var(--primary-color) !important;
 }
 .bg-primary-transparent:hover {
   background-color: var(--primary01) !important;
-  color: var(--primary-color) !important;
 }
 
 .bg-secondary-transparent {
   background-color: rgba(var(--secondary-rgb), 0.1) !important;
-  color: rgb(var(--secondary-rgb)) !important;
 }
 .bg-secondary-transparent:hover {
   background-color: rgba(var(--secondary-rgb), 0.1) !important;
-  color: rgb(var(--secondary-rgb)) !important;
 }
 
 .bg-info-transparent {
   background-color: rgba(var(--info-rgb), 0.1) !important;
-  color: rgb(var(--info-rgb)) !important;
 }
 .bg-info-transparent:hover {
   background-color: rgba(var(--info-rgb), 0.1) !important;
-  color: rgb(var(--info-rgb)) !important;
 }
 
 .bg-success-transparent {
   background-color: rgba(var(--success-rgb), 0.1) !important;
-  color: rgb(var(--success-rgb)) !important;
 }
 .bg-success-transparent:hover {
   background-color: rgba(var(--success-rgb), 0.1) !important;
-  color: rgb(var(--success-rgb)) !important;
 }
 
 .bg-warning-transparent {
   background-color: rgba(var(--warning-rgb), 0.1) !important;
-  color: rgb(var(--warning-rgb)) !important;
 }
 .bg-warning-transparent:hover {
   background-color: rgba(var(--warning-rgb), 0.1) !important;
-  color: rgb(var(--warning-rgb)) !important;
 }
 
 .bg-danger-transparent {
   background-color: rgba(var(--danger-rgb), 0.1) !important;
-  color: rgb(var(--danger-rgb)) !important;
 }
 .bg-danger-transparent:hover {
   background-color: rgba(var(--danger-rgb), 0.1) !important;
-  color: rgb(var(--danger-rgb)) !important;
 }
 
 .bg-light-transparent {
   background-color: rgba(var(--light-rgb), 0.1) !important;
-  color: rgb(var(--light-rgb)) !important;
 }
 .bg-light-transparent:hover {
   background-color: rgba(var(--light-rgb), 0.1) !important;
-  color: var(--default-text-color) !important;
 }
 
 .bg-dark-transparent {
   background-color: rgba(var(--dark-rgb), 0.1) !important;
-  color: rgb(var(--dark-rgb)) !important;
 }
 .bg-dark-transparent:hover {
   background-color: rgba(var(--dark-rgb), 0.1) !important;
-  color: rgb(var(--dark-rgb)) !important;
 }
 
 .bg-pink-transparent {
   background-color: rgba(var(--pink-rgb), 0.1) !important;
-  color: rgb(var(--pink-rgb)) !important;
 }
 .bg-pink-transparent:hover {
   background-color: rgba(var(--pink-rgb), 0.1) !important;
-  color: rgb(var(--pink-rgb)) !important;
 }
 
 .bg-orange-transparent {
   background-color: rgba(var(--orange-rgb), 0.1) !important;
-  color: rgb(var(--orange-rgb)) !important;
 }
 .bg-orange-transparent:hover {
   background-color: rgba(var(--orange-rgb), 0.1) !important;
-  color: rgb(var(--orange-rgb)) !important;
 }
 
 .bg-purple-transparent {
   background-color: rgba(var(--purple-rgb), 0.1) !important;
-  color: rgb(var(--purple-rgb)) !important;
 }
 .bg-purple-transparent:hover {
   background-color: rgba(var(--purple-rgb), 0.1) !important;
-  color: rgb(var(--purple-rgb)) !important;
 }
 
 .bg-teal-transparent {
   background-color: rgba(var(--teal-rgb), 0.1) !important;
-  color: rgb(var(--teal-rgb)) !important;
 }
 .bg-teal-transparent:hover {
   background-color: rgba(var(--teal-rgb), 0.1) !important;
-  color: rgb(var(--teal-rgb)) !important;
 }
 
 .bg-green-transparent {
   background-color: rgba(29, 216, 113, 0.1) !important;
-  color: #1dd871 !important;
 }
 .bg-green-transparent:hover {
   background-color: rgba(29, 216, 113, 0.1) !important;
-  color: #1dd871 !important;
 }
 
 .bg-indigo-transparent {
   background-color: rgba(77, 93, 219, 0.1) !important;
-  color: #4d5ddb !important;
 }
 .bg-indigo-transparent:hover {
   background-color: rgba(77, 93, 219, 0.1) !important;
-  color: #4d5ddb !important;
 }
 
 .bg-yellow-transparent {
   background-color: rgba(255, 193, 2, 0.1) !important;
-  color: #ffc102 !important;
 }
 .bg-yellow-transparent:hover {
   background-color: rgba(255, 193, 2, 0.1) !important;
-  color: #ffc102 !important;
 }
 
 .bg-blue-transparent {
   background-color: rgba(43, 62, 101, 0.1) !important;
-  color: #2b3e65 !important;
 }
 .bg-blue-transparent:hover {
   background-color: rgba(43, 62, 101, 0.1) !important;
-  color: #2b3e65 !important;
 }
 
 /* End::background transparent */
