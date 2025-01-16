@@ -18436,13 +18436,21 @@ code[class*=language-] {
 .bradcrumb_sec{
   padding: 100px 0 30px;
   color:#fff;
-background-image: url("../images/media/landing/4.jpg");
+background: rgba(var(--purple-rgb),.7);
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 }
 .bradcrumb_sec h1{
   color:#fff;
+}
+.campaign-sec .carousel-control-next, .campaign-sec .carousel-control-prev{
+  width: 4%;
+}
+.campaign-sec .carousel-control-next  .carousel-control-next-icon, .campaign-sec .carousel-control-prev .carousel-control-prev-icon{ 
+  color:#fff;
+  font-size: 20px;
+  background:rgb(10 10 10);
 }
 .landing-body .landing-banner {
   position: relative;
