@@ -18461,6 +18461,15 @@ background-repeat: no-repeat;
   background-position: center;
   background-repeat: no-repeat;
 }
+.landing-body .ranking-banner {
+  position: relative;
+  width: 100%;
+  inset-block-start: 0;
+  background-image: url("../images/ecommerce/png/rankingimg.jfif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 /* .landing-body .landing-banner:before {
   content: "";
   position: absolute;

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="horizontal" data-nav-style="menu-click" data-menu-position="fixed" data-theme-mode="light">
+
+<head>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Dreabee - Your All-in-One Influencer Marketing Platform </title>
+    <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/brand-logos/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap Css -->
+    <link id="style" href="../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+
+    <!-- Style Css -->
+    <link href="../assets/css/styles.css" rel="stylesheet" >
+
+    <!-- Icons Css -->
+    <link href="../assets/css/icons.css" rel="stylesheet" >
+
+    <!-- Node Waves Css -->
+    <link href="../assets/libs/node-waves/waves.min.css" rel="stylesheet" >
+
+    <!-- SwiperJS Css -->
+    <link rel="stylesheet" href="../assets/libs/swiper/swiper-bundle.min.css">
+
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="../assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="../assets/libs/@simonwep/pickr/themes/nano.min.css">
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="../assets/libs/choices.js/public/assets/styles/choices.min.css">
+
+    <script>
+        if(localStorage.ynexlandingdarktheme){
+            document.querySelector("html").setAttribute("data-theme-mode","dark")
+        }
+        if(localStorage.ynexlandingrtl){
+            document.querySelector("html").setAttribute("dir","rtl")
+            document.querySelector("#style")?.setAttribute("href", "../assets/libs/bootstrap/css/bootstrap.rtl.min.css");
+        }
+    </script>
+
+
+</head>
+
+<body class="landing-body">
+
+    <!-- Start Switcher -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="switcher-canvas" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Switcher</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="">
+                <p class="switcher-style-head">Theme Color Mode:</p>
+                <div class="row switcher-style">
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-light-theme">
+                                Light
+                            </label>
+                            <input class="form-check-input" type="radio" name="theme-style" id="switcher-light-theme"
+                                checked>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-dark-theme">
+                                Dark
+                            </label>
+                            <input class="form-check-input" type="radio" name="theme-style" id="switcher-dark-theme">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <p class="switcher-style-head">Directions:</p>
+                <div class="row switcher-style">
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-ltr">
+                                LTR
+                            </label>
+                            <input class="form-check-input" type="radio" name="direction" id="switcher-ltr" checked>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-rtl">
+                                RTL
+                            </label>
+                            <input class="form-check-input" type="radio" name="direction" id="switcher-rtl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-colors">
+                <p class="switcher-style-head">Theme Primary:</p>
+                <div class="d-flex align-items-center switcher-style">
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-1" type="radio"
+                            name="theme-primary" id="switcher-primary">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-2" type="radio"
+                            name="theme-primary" id="switcher-primary1">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-3" type="radio" name="theme-primary"
+                            id="switcher-primary2">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-4" type="radio" name="theme-primary"
+                            id="switcher-primary3">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-5" type="radio" name="theme-primary"
+                            id="switcher-primary4">
+                    </div>
+                    <div class="form-check switch-select me-3 ps-0 mt-1 color-primary-light">
+                        <div class="theme-container-primary"></div>
+                        <div class="pickr-container-primary"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="switcher-style-head">reset:</p>
+                <div class="text-center">
+                    <button id="reset-all" class="btn btn-danger mt-3">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Switcher -->
+
+    <div class="landing-page-wrapper">
+
+         <!-- app-header -->
+ <header class="app-header">
+
+            <!-- Start::main-header-container -->
+            <div class="main-header-container container-fluid">
+
+                <!-- Start::header-content-left -->
+                <div class="header-content-left">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <div class="horizontal-logo">
+                            <a href="index.html" class="header-logo">
+                                <img src="../assets/images/brand-logos/toggle-logo.png" alt="logo" class="toggle-logo">
+                                <img src="../assets/images/brand-logos/toggle-dark.png" alt="logo" class="toggle-dark">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <!-- Start::header-link -->
+                        <a href="javascript:void(0);" class="sidemenu-toggle header-link" data-bs-toggle="sidebar">
+                            <span class="open-toggle">
+                                <i class="ri-menu-3-line fs-20"></i>
+                            </span>
+                        </a>
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-left -->
+
+                <!-- Start::header-content-right -->
+                <div class="header-content-right">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element align-items-center">
+                        <!-- Start::header-link|switcher-icon -->
+                        <div class="btn-list d-lg-none d-block">
+                            <a href="sign-up-basic.html" class="btn btn-primary-light">
+                               login
+                            </a>
+                            <a href="sign-up-basic.html" class="btn btn-primary-light">
+                                Sign Up
+                            </a>
+                            <button class="btn btn-icon btn-success switcher-icon" data-bs-toggle="offcanvas" data-bs-target="#switcher-canvas">
+                                <i class="ri-settings-3-line"></i>
+                            </button>
+                        </div>
+                        <!-- End::header-link|switcher-icon -->
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-right -->
+
+            </div>
+            <!-- End::main-header-container -->
+
+        </header>       
+        <!-- /app-header -->
+
+        <!-- Start::app-sidebar -->
+        <aside class="app-sidebar sticky" id="sidebar">
+
+            <div class="container-xl">
+                <!-- Start::main-sidebar -->
+                <div class="main-sidebar">
+
+                    <!-- Start::nav -->
+                    <nav class="main-menu-container nav nav-pills sub-open">
+                        <div class="landing-logo-container">
+                            <div class="horizontal-logo">
+                                <a href="index.html" class="header-logo">
+                                    <img src="../assets/images/brand-logos/desktop-logo.png" alt="logo" class="desktop-logo">
+                                    <img src="../assets/images/brand-logos/desktop-white.png" alt="logo" class="desktop-white">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slide-left" id="slide-left"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path> </svg></div>
+                        <ul class="main-menu">
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a class="linked_text" href="landing.html">
+                                    <span class="side-menu__label">Home</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="about-us.html" class="linked_text">
+                                    <span class="side-menu__label">About</span>
+                                </a>
+                                <!-- <a href="about-us.html" class="side-menu__item">
+                                    <span class="side-menu__label">About</span>
+                                </a> -->
+                               
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide has-sub">
+                                <a href="javascript:void(0);" class="side-menu__item">
+                                    <span class="side-menu__label me-2">More</span>
+                                    <i class="fe fe-chevron-right side-menu__angle op-8"></i>
+                                </a>
+                                <ul class="slide-menu child1">
+                                    <li class="slide">
+                                        <a href="api-documentation.html" class="linked_text">api-documentation</a>
+                                    </li>
+                                    <li class="slide">
+                                        <a href="agency-solutions.html" class="linked_text">agency-solutions</a>
+                                    </li>
+                                    <li class="slide">
+                                        <a href="testimonials.html" class="linked_text">testimonials</a>
+                                    </li>
+                                    <li class="slide">
+                                        <a href="InfluencerMarketingTrends.html" class="linked_text">Influencer Marketing Trends</a>
+                                    </li>
+                                    <li class="slide">
+                                        <a href="InfluencerCategoriesNiches.html" class="linked_text">Influencer Categories Niches</a>
+                                    </li>
+                                    <li class="slide">
+                                        <a href="terms_conditions.html" class="linked_text">terms_conditions</a>
+                                    </li>
+                                    <li class="slide">
+                                        <a href="CollaborationHub.html" class="linked_text">CollaborationHub</a>
+                                    </li>
+                                   
+                                </ul>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="#testimonials" class="side-menu__item">
+                                    <span class="side-menu__label">Clients</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="#team" class="side-menu__item">
+                                    <span class="side-menu__label">Team</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="pricing.html" class="linked_text">
+                                    <span class="side-menu__label">Pricing</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="#faq" class="side-menu__item">
+                                    <span class="side-menu__label">Faq's</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="contact-us.html" class="linked_text">
+                                    <span class="side-menu__label">Contact</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+
+                        </ul>
+                        <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path> </svg></div>
+                        <div class="d-lg-flex d-none">
+                            <div class="btn-list d-lg-flex d-none mt-lg-2 mt-xl-0 mt-0">
+                                <a href="sign-in-cover.html" class="btn btn-wave btn-primary">
+                                   Login
+                                </a>
+                                <a href="sign-up-cover.html" class="btn btn-wave btn-primary">
+                                 Sign Up
+                                </a>
+                                <button class="btn btn-wave btn-icon btn-light switcher-icon" data-bs-toggle="offcanvas" data-bs-target="#switcher-canvas">
+                                    <i class="ri-settings-3-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- End::nav -->
+
+                </div>
+                <!-- End::main-sidebar -->
+            </div>
+
+        </aside>
+        <!-- End::app-sidebar -->
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+
+            <div class="bradcrumb_sec">
+
+                <div class="container">
+                    <!-- Page Header -->
+                    <div
+                        class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
+                        <h1 class="page-title fw-semibold fs-18 mb-0">Influencer Verification & Fraud Detection</h1>
+                        <div class="ms-md-1 ms-0">
+                            <nav>
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Pages</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Influencer Verification & Fraud Detection</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+
+                
+
+                <!-- Start::row-1 -->
+               
+
+                <div class="container-fluid reviews-container">
+                    <!-- Start::row-1 -->
+                    <div class="row justify-content-center">
+                       
+                        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0"
+                            class="scrollspy-example bg-light p-3 rounded-2"
+                            data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+                            <h6 class="fw-semibold" id="scrollspyHeading1">Influencer Verification & Fraud Detection</h6>
+                            <p class="text-muted">At Dreabee, we understand that authentic connections are essential for impactful influencer marketing. To protect brands from fraudulent activities, we provide robust verification and fraud detection tools. Our platform performs thorough analysis to verify influencer credibility, detect fake followers, and ensure genuine engagement. Here’s an in-depth look at how Dreabee safeguards your brand by identifying credible influencers and filtering out inauthentic activity.
+                            </p>
+                            
+                        </div>
+                        
+                        </div>
+                    </div>
+                    <!--End::row-1 -->
+                </div>
+            <div class="container-fluid">
+
+                
+
+                <!-- Start::row-1 -->
+               
+
+                <div class="container-fluid reviews-container">
+                    <!-- Start::row-1 -->
+                    <div class="row justify-content-center">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-4">
+                               
+                            </div>
+                            <div class="col-md-9 col-sm-8">
+                                <div data-bs-spy="scroll" data-bs-target="#navbar-example3"
+                                    data-bs-smooth-scroll="true" tabindex="0" class="scrollspy-example-2">
+                                    <div id="item-1">
+                                        <h6 class="fw-semibold">Influencer Verification</h6>
+                                        <p class="text-muted">Influencer Verification: Ensuring Authentic Connections</p>
+                                    </div>
+                                    <div id="item-1-1">
+                                        <!-- <h6 class="fw-semibold">Item 1-1</h6> -->
+                                        <p class="text-muted">Dreabee’s verification process is designed to confirm that influencers are genuine, active, and aligned with their claimed audience demographics. By analyzing various data points, our platform provides assurance that each influencer’s profile is authentic and well-suited for strategic brand partnerships.
+                                        </p>
+                                    </div>
+                                    <div id="item-1-2">
+                                        <!-- <h6 class="fw-semibold">Item 1-2</h6> -->
+                                        <p class="text-muted">Our verification methods include:
+                                        </p>
+                                    </div>
+                                    <div id="item-2">
+                                        <!-- <h6 class="fw-semibold">Item 2</h6> -->
+                                        <p class="text-muted">Engagement Quality Analysis: We assess the quality of interactions on influencer posts to distinguish between genuine engagement and inauthentic activity.</p>
+                                    </div>
+                                    <div id="item-3-1">
+                                        <!-- <h6 class="fw-semibold">Item 3-1</h6> -->
+                                        <p class="text-muted">Follower Demographics Verification: Audience demographics are reviewed to ensure that followers align with influencer claims, providing transparency to brands.</p>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class="col-md-9 col-sm-8">
+                                <div data-bs-spy="scroll" data-bs-target="#navbar-example3"
+                                    data-bs-smooth-scroll="true" tabindex="0" class="scrollspy-example-2">
+                                    <div id="item-1">
+                                        <h6 class="fw-semibold">Fraud Detection</h6>
+                                        <p class="text-muted">Fraud Detection: Protecting Your Campaign Integrity</p>
+                                    </div>
+                                    <div id="item-1-1">
+                                        <!-- <h6 class="fw-semibold">Item 1-1</h6> -->
+                                        <p class="text-muted">Dreabee’s fraud detection tools are designed to flag suspicious activity patterns, such as fake followers or artificially inflated engagement metrics. By identifying these red flags, Dreabee protects brands from ineffective partnerships and ensures campaign integrity.
+                                        </p>
+                                    </div>
+                                    <div id="item-1-2">
+                                        <!-- <h6 class="fw-semibold">Item 1-2</h6> -->
+                                        <p class="text-muted">Our fraud detection capabilities include:
+                                        </p>
+                                    </div>
+                                    <div id="item-2">
+                                        <!-- <h6 class="fw-semibold">Item 2</h6> -->
+                                        <p class="text-muted">Engagement Fraud Monitoring: Dreabee identifies potential engagement fraud by tracking unusual spikes in likes, comments, and shares, helping brands avoid influencers with artificially boosted stats.</p>
+                                    </div>
+                                    <div id="item-3-1">
+                                        <!-- <h6 class="fw-semibold">Item 3-1</h6> -->
+                                        <p class="text-muted">Transparency in Reporting: Data You Can Trust</p>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class="container-fluid reviews-container">
+                                <!-- Start::row-1 -->
+                                <div class="row justify-content-center">
+                                   
+                                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0"
+                                        class="scrollspy-example bg-light p-3 rounded-2"
+                                        data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+                                        <h6 class="fw-semibold text-center text-primary" id="scrollspyHeading1">Dreabee provides detailed, easy-to-understand reports that empower brands to make informed decisions. Each report includes verification status, engagement quality scores, and a fraud risk assessment, helping brands evaluate influencer authenticity with confidence.</h6>
+                                        <p class="text-muted">Dreabee provides brands with clear, actionable reports on influencer authenticity. Each report includes verification status, fraud risk assessment, and engagement quality scores, helping brands make data-backed decisions.
+                                        </p>
+                                        
+                                    </div>
+                                    
+                                    </div>
+                                    <div class="col-md-9 col-sm-8">
+                                        <div data-bs-spy="scroll" data-bs-target="#navbar-example3"
+                                            data-bs-smooth-scroll="true" tabindex="0" class="scrollspy-example-2">
+                                            <div id="item-1">
+                                                <h6 class="fw-semibold">Report Components:</h6>
+                                               
+                                            </div>
+                                            <div id="item-1-1">
+                                                <!-- <h6 class="fw-semibold">Item 1-1</h6> -->
+                                                <p class="text-muted">Influencer Verification Status: A quick view of each influencer’s authenticity rating based on our checks.
+                                                </p>
+                                            </div>
+                                            <div id="item-1-2">
+                                                <!-- <h6 class="fw-semibold">Item 1-2</h6> -->
+                                                <p class="text-muted">Engagement Quality Score: A metric that reflects the level of genuine interaction within the influencer’s audience.
+                                                </p>
+                                            </div>
+                                            <div id="item-2">
+                                                <!-- <h6 class="fw-semibold">Item 2</h6> -->
+                                                <p class="text-muted">With Dreabee’s influencer verification and fraud detection tools, you can confidently build trusted partnerships that drive genuine engagement and ROI. Explore the power of authentic influencer marketing with Dreabee.</p>
+                                            </div>
+                                          
+                                        </div>
+                                    </div>
+                                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0"
+                                    class="scrollspy-example bg-light p-3 rounded-2"
+                                    data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+                                    
+                                    <p class="text-muted">Ensure your influencer partnerships are authentic and effective. With Dreabee’s influencer verification and fraud detection tools, you can build trusted connections and maximize the impact of your campaigns.
+                                    </p>
+                                    
+                                </div>
+                                <div class="col-md-9 col-sm-8">
+                                    <div data-bs-spy="scroll" data-bs-target="#navbar-example3"
+                                        data-bs-smooth-scroll="true" tabindex="0" class="scrollspy-example-2">
+                                        <div id="item-1">
+                                            <h6 class="fw-semibold">Fraud Detection</h6>
+                                            <p class="text-muted">Fraud Detection: Protecting Your Campaign Integrity</p>
+                                        </div>
+                                        <div id="item-1-1">
+                                            <!-- <h6 class="fw-semibold">Item 1-1</h6> -->
+                                            <p class="text-muted">Profile Authenticity Checks: Dreabee’s system analyzes influencers’ profile history, activity, and consistency, identifying discrepancies that may indicate inauthentic profiles.
+                                            </p>
+                                        </div>
+                                        <div id="item-1-2">
+                                            <!-- <h6 class="fw-semibold">Item 1-2</h6> -->
+                                            <p class="text-muted">Engagement Quality Assessment: By reviewing interactions on influencer posts, we determine the level of genuine engagement, ensuring that brands collaborate only with influencers whose audiences are actively involved.
+                                            </p>
+                                        </div>
+                                        <div id="item-2">
+                                            <!-- <h6 class="fw-semibold">Item 2</h6> -->
+                                            <p class="text-muted">Follower Demographics Verification: We verify audience demographics, such as age, location, and interests, to match influencer claims with actual follower characteristics, providing brands with audience transparency.</p>
+                                        </div>
+                                        <div id="item-3-1">
+                                            <!-- <h6 class="fw-semibold">Item 3-1</h6> -->
+                                            <p class="text-muted">Fake Follower Detection: Our algorithms detect sudden, unusual follower increases and identify inactive or duplicate accounts to prevent campaigns from reaching artificial followers.</p>
+                                        </div>
+                                        <div id="item-3-1">
+                                            <!-- <h6 class="fw-semibold">Item 3-1</h6> -->
+                                            <p class="text-muted">Engagement Fraud Monitoring: By tracking engagement metrics such as likes and comments over time, Dreabee spots suspicious patterns, indicating potential paid or artificially boosted engagement.</p>
+                                        </div>
+                                        <div id="item-3-1">
+                                            <!-- <h6 class="fw-semibold">Item 3-1</h6> -->
+                                            <p class="text-muted">Bot Activity Identification: Advanced AI flags automated bot behavior, such as repetitive or identical comments, preventing brands from engaging with influencers who may use bot-driven engagement.</p>
+                                        </div>
+                                        <div id="item-3-1">
+                                            <!-- <h6 class="fw-semibold">Item 3-1</h6> -->
+                                            <p class="text-muted">Influencer Verification Status: Displays a trust score based on Dreabee’s verification checks, providing a clear indication of influencer credibility.</p>
+                                        </div>
+                                        <div id="item-3-1">
+                                            <!-- <h6 class="fw-semibold">Item 3-1</h6> -->
+                                            <p class="text-muted">Engagement Quality Score: A proprietary metric that evaluates the authenticity and quality of interactions within the influencer’s audience.</p>
+                                        </div>
+                                        <div id="item-3-1">
+                                            <!-- <h6 class="fw-semibold">Item 3-1</h6> -->
+                                            <p class="text-muted">Fraud Risk Assessment: A risk level indicator that highlights any detected suspicious activity patterns, helping brands avoid fraudulent engagements.</p>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                    <!--End::row-1 -->
+                </div>
+                <!-- Start:: Section-6 -->
+               
+                <!--End::row-1 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+    </div>
+    <section class="section landing-footer text-fixed-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-12 mb-md-0 mb-3">
+                    <div class="px-4">
+                        <p class="fw-semibold mb-3"><a href="index.html"><img src="../assets/images/brand-logos/desktop-dark.png" alt=""></a></p>
+                        <p class="mb-2 op-6 fw-normal">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit et magnam, fuga est mollitia eius, quo illum illo inventore optio aut quas omnis rem. Dolores accusantium aspernatur minus ea incidunt.
+                        </p>
+                        <p class="mb-0 op-6 fw-normal">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem ea esse ad</p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6 col-12">
+                    <div class="px-4">
+                        <h6 class="fw-semibold mb-3 text-fixed-white">PAGES</h6>
+                        <ul class="list-unstyled op-6 fw-normal landing-footer-list">
+                            <li>
+                                <a href="javascript:void(0);" class="text-fixed-white">Email</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="text-fixed-white">Profile</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="text-fixed-white">Timeline</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="text-fixed-white">Projects</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="text-fixed-white">Contacts</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="text-fixed-white">Portfolio</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6 col-12">
+                    <div class="px-4">
+                        <h6 class="fw-semibold text-fixed-white">INFO</h6>
+                        <ul class="list-unstyled op-6 fw-normal landing-footer-list">
+                            <li>
+                                <a href="javascript:void(0);" class="text-fixed-white">Our Team</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="text-fixed-white">Contact US</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="text-fixed-white">About</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="text-fixed-white">Services</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="text-fixed-white">Blog</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="text-fixed-white">Terms &amp; Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="px-4">
+                        <h6 class="fw-semibold text-fixed-white">CONTACT</h6>
+                        <ul class="list-unstyled fw-normal landing-footer-list">
+                            <li>
+                                <a href="javascript:void(0);" class="text-fixed-white op-6"><i class="ri-home-4-line me-1 align-middle"></i> New York, NY 10012, US</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="text-fixed-white op-6"><i class="ri-mail-line me-1 align-middle"></i> info@fmail.com</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="text-fixed-white op-6"><i class="ri-phone-line me-1 align-middle"></i> +(555)-1920 1831</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="text-fixed-white op-6"><i class="ri-printer-line me-1 align-middle"></i> +(123) 1293 123</a>
+                            </li>
+                            <li class="mt-3">
+                                <p class="mb-2 fw-semibold op-8">FOLLOW US ON :</p>
+                                <div class="mb-0">
+                                    <div class="btn-list">
+                                        <button class="btn btn-sm btn-icon btn-primary-light btn-wave waves-effect waves-light">
+                                            <i class="ri-facebook-line fw-bold"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-icon btn-secondary-light btn-wave waves-effect waves-light">
+                                            <i class="ri-twitter-x-line fw-bold"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-icon btn-warning-light btn-wave waves-effect waves-light">
+                                            <i class="ri-instagram-line fw-bold"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-icon btn-success-light btn-wave waves-effect waves-light">
+                                            <i class="ri-github-line fw-bold"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-icon btn-danger-light btn-wave waves-effect waves-light">
+                                            <i class="ri-youtube-line fw-bold"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="scrollToTop">
+        <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span>
+    </div>
+    <div id="responsive-overlay"></div>
+
+    <!-- Popper JS -->
+    <script src="../assets/libs/@popperjs/core/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Color Picker JS -->
+    <script src="../assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
+
+    <!-- Choices JS -->
+    <script src="../assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="../assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Defaultmenu JS -->
+    <script src="../assets/js/defaultmenu.min.js"></script>
+
+    <!-- Internal Landing JS -->
+    <script src="../assets/js/landing.js"></script>
+
+    <!-- Node Waves JS-->
+    <script src="../assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Sticky JS -->
+    <script src="../assets/js/sticky.js"></script>
+
+</body>
+
+</html>
