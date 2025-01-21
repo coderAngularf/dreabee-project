@@ -19389,6 +19389,13 @@ background-repeat: no-repeat;
   line-height: 7rem;
   font-size: 1.25rem;
 }
+.campaingn-card h6{
+font-size: 0.9rem;
+
+}
+.text-right{
+text-align: right;
+}
 .avatar.avatar-xl .avatar-badge {
   inset-block-start: -8%;
   inset-inline-end: -0.2%;
