@@ -21768,4 +21768,29 @@ padding: 5px;
 }
 #sidebar{background-color: #00000066;}
 #sidebar.sticky-pin{background-color: #fff;}
+ul.list-unstyled{
+  position: relative;
+  padding-left: 20px;
+}
+ul.list-unstyled.no-icon{
+  padding-left: 0;
+}
+
+ul.list-unstyled li:before{
+  font-family: "remixicon";
+  content:"\f2e4";
+  position: absolute;
+  left:0
+}
+ul.list-unstyled.no-icon li:before{
+  content: "";
+  position: absolute;
+  inset-block-start: 4.625rem;
+  inset-block-end: -3rem;
+  width: 1px;
+  border: 1px dashed var(--primary02);
+  inset-inline-start: 20%;
+  margin-inline-start: -1.5px;
+}
+
 /* End:: Icon Link */
