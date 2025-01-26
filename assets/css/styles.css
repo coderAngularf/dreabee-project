@@ -18453,7 +18453,7 @@ background-repeat: no-repeat;
   position: relative;
   width: 100%;
   inset-block-start: 0;
-  background-image: url("../images/media/landing/4.jpg");
+  background-image: url("../images/media/landing/1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -21792,5 +21792,7 @@ ul.list-unstyled.no-icon li:before{
   inset-inline-start: 20%;
   margin-inline-start: -1.5px;
 }
-
+.text-left{
+  text-align: left !important;
+}
 /* End:: Icon Link */
