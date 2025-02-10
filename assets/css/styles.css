@@ -18453,7 +18453,8 @@ background-repeat: no-repeat;
   position: relative;
   width: 100%;
   inset-block-start: 0;
-  background-image: url("../images/media/landing/1.jpg");
+  /* background-image: url("../images/media/landing/1.jpg"); */
+  background-color: #927bca;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
