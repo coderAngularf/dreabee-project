@@ -43,7 +43,8 @@
             dynamicBullets: true,
             clickable: true,
         },
-        loop: true,
+        loop: true, 
+        slidesPerView: 3,
         autoplay: {
             delay: 1500,
             disableOnInteraction: false
