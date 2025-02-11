@@ -21796,4 +21796,26 @@ ul.list-unstyled.no-icon li:before{
 .text-left{
   text-align: left !important;
 }
+.nav-item.dropdown.dropdown-mega .dropdown-menu {
+  width: 90%;
+  top: auto;
+  left: 5% !important;
+  transform: translate(0, 70px) !important;
+}
+.dropdown-toggle.side-menu__item{
+  color: #fff;
+  opacity: 0.8;
+  padding: 2px 18px 5px!important;
+  font-size: 13px;
+}
+.sticky-pin .dropdown-toggle.side-menu__item{
+  opacity: 0.8;
+  color:#000;
+}
+.similar-ht-sec .card.custom-card .card-body{
+  min-height: 340px;
+}
+.similar-ht-sec h5.fw-semibold{
+  line-height: 26px
+}
 /* End:: Icon Link */
