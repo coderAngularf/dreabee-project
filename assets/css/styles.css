@@ -18463,10 +18463,11 @@ background-repeat: no-repeat;
   position: relative;
   width: 100%;
   inset-block-start: 0;
-  background-image: url("../images/ecommerce/png/rankingimg.jfif");
+  background-image: url("../images/media/landing/1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #d3d5e5;
 }
 /* .landing-body .landing-banner:before {
   content: "";
